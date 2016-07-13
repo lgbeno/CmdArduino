@@ -38,14 +38,8 @@
     its possible to execute individual functions within the sketch. 
 */
 /**************************************************************************/
-#include <avr/pgmspace.h>
-#if ARDUINO >= 100
-#include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
-#include "HardwareSerial.h"
 #include "Cmd.h"
+#include <Arduino.h>
 
 // command line message buffer and pointer
 static uint8_t msg[MAX_MSG_SIZE];
@@ -55,8 +49,8 @@ static uint8_t *msg_ptr;
 static cmd_t *cmd_tbl_list, *cmd_tbl;
 
 // text strings for command prompt (stored in flash)
-const char cmd_banner[] PROGMEM = "*************** CMD *******************";
-const char cmd_prompt[] PROGMEM = "CMD >> ";
+const char cmd_banner[] PROGMEM = "";
+const char cmd_prompt[] PROGMEM = ">> ";
 const char cmd_unrecog[] PROGMEM = "CMD: Command not recognized.";
 
 /**************************************************************************/
