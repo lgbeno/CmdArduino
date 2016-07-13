@@ -185,7 +185,7 @@ void cmdInit(uint32_t speed)
     cmd_tbl_list = NULL;
 
     // set the serial speed
-    Serial.begin(speed);
+    //Serial.begin(speed);
 }
 
 /**************************************************************************/
