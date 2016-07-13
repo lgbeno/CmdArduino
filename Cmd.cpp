@@ -176,7 +176,7 @@ void cmdPoll()
     and initializes things. 
 */
 /**************************************************************************/
-void cmdInit(uint32_t speed)
+void cmdInit()
 {
     // init the msg ptr
     msg_ptr = msg;
